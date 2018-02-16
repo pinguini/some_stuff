@@ -18,7 +18,7 @@ EOF
 
 
 chmod +x /opt/citeck/scripts/gzip_remove.sh
-echo "10 *	* * *	root /opt/citeck/scripts/gzip_remove.sh > /dev/null 2>/dev/null" >> /etc/crontab
+echo "\n10 *	* * *	root /opt/citeck/scripts/gzip_remove.sh > /dev/null 2>/dev/null" >> /etc/crontab
 
 
 echo -e "/opt/alfresco*/tomcat/logs/catalina.out {\n   copytruncate\n   daily\n   rotate 3\n   compress\n   missingok\n}\n" > /etc/logrotate.d/tomcat-catalina
